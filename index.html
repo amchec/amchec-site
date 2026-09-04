@@ -67,8 +67,32 @@ h2 {
   font-size: 16px;
   font-weight: 400;
   margin: 0 0 28px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--ink);
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+h2::after {
+  content: "============================================================================================================================================";
+  display: block;
+  margin-top: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.rule {
+  margin: 0 0 56px;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.rule::before {
+  content: "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -";
 }
  
 .clip {
@@ -238,6 +262,7 @@ a:focus-visible {
     <img class="ascii-shot__src" src="img/headshot.jpg"
          alt="Describe the photograph here" data-cols="90">
   </figure>
+<div class="rule" aria-hidden="true"></div>
  
 <h2>Selected work</h2>
 
